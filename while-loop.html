@@ -325,7 +325,9 @@ while (i < 10);
 document.getElementById("demo").innerHTML = text; 
                 </code>              
             </pre>               
-        </div>            
+        </div>   
+        
+        
 
         <div class="runcode">
             <h3>Run code</h3>
@@ -341,6 +343,27 @@ document.getElementById("demo").innerHTML = text;
                                          
         </div>            
     </div>
+
+    <h2>The loop in this example uses a while loop to collect the car names from the cars array:</h2>
+
+    <div class="container">
+        <div id="code">
+            <h3>Sample code</h3>
+            <pre>
+                <code>
+const cars = ["BMW", "Volvo", "Saab", "Ford"];
+
+let i = 0;
+let text = "";
+while (cars[i]) {
+    text += cars[i] + "<br>";
+    i++;
+}
+
+document.getElementById("demo").innerHTML = text;
+                </code>              
+            </pre>               
+        </div>   
     <div class="runcode">
         <h3>Run code</h3>
         <pre>
@@ -350,7 +373,7 @@ document.getElementById("demo").innerHTML = text;
                 </div>
             </code>
         </pre>
-        <button onclick="run2()" id="runbut">Run</button>
+        <button onclick="run3()" id="runbut">Run</button>
         <button onClick="window.location.reload();" id="clrbut">Clear</button> 
     </div>
         

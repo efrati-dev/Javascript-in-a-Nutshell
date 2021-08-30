@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mockup</title>
+</head>
+
+<script>
+
+    function run1() {
+        let text = "";
+        let i = 0;
+        while (i < 10) {
+        text += "<br>The number is " + i;
+        i++;
+
+        document.getElementById("run1").innerHTML = text;        
+        }
+    }
+
+    function run2() {
+        let text = ""
+        let i = 0;
+
+        do {
+        text += "<br>The number is " + i;
+        i++;
+        }
+        while (i < 10);  
+
+        document.getElementById("run2").innerHTML = text;        
+    }
+
+    function run3() {
+        const cars = ["BMW", "Volvo", "Saab", "Ford"];
+
+        let i = 0;
+        let text = "";
+        for (;cars[i];) {
+        text += cars[i] + "<br>";
+        i++;
+        }
+
+        document.getElementById("run3").innerHTML = text;  
+    }
+
+   
+</script>
+
+<style>
+    
+    body {
+        background-color:rgb(179, 245, 218);
+    }
+
+    .tablecont {
+        background-color: rgb(122, 216, 233);
+        color: darkslategray;
+        height: auto;  
+        width: 20vw;        
+        font-size: 18px;   
+        border: black solid 3px;         
+        margin: 20px; 
+        padding: 10px;           
+        margin-top: 0px;     
+
+    }
+
+    ul, ol, li {
+        padding: 5px;
+        margin: 10px;
+        margin-left: 20px;
+    }
+
+    header {
+        background-color: rgb(245, 145, 245);
+        color: rgb(126, 87, 123);
+        height: auto;          
+        margin: 10px; 
+        padding: 10px;
+    }
+
+    #nav {       
+        font-size: 18px;
+        padding: 10px;
+        margin-left: 40px; 
+        margin: 10px;       
+    }
+
+    button {
+        background-color: rgb(226, 233, 122);
+        color: darkslategray;
+        height: auto;
+        width: auto;       
+        margin: 10px;
+        font-size: 18px;
+        padding: 5px;
+    }
+
+    h1, h2 {
+        text-align: center;
+        margin: 20px;
+        color: rgb(126, 87, 123);
+        
+    }
+    h3 {
+        margin: 20px;
+        margin-left: 5%;
+    }
+
+    .tease {
+        background-color: rgb(145, 160, 245);
+        color:  rgb(126, 87, 123);        
+        font-size: 20px;
+        width: 70vw;
+        float: right;
+        margin: 20px; 
+        padding: 30px;
+        line-height: 1.5em;
+          
+       
+    }
+
+    .explain {
+        background-color: rgb(167, 145, 245);
+        color:  rgb(126, 87, 123);
+        height: auto;     
+        font-size: 20px;
+        margin: 20px; 
+        padding: 10px;
+       
+    }
+
+    .example {
+        background-color: lightgray;
+        color: darkslateblue;
+        height: auto;         
+        font-size: 20px;
+        margin: 20px;
+        padding: 10px;
+        
+         
+    }
+
+    code {
+        background-color: lightgray;
+        color: darkslateblue;             
+        margin: 20px; 
+        padding: 2px; 
+        
+         
+    }
+
+    footer {
+        background-color: rgb(245, 213, 145);
+        color:  rgb(126, 87, 123);
+        height: auto;        
+        text-align: center;
+        margin: 10px; 
+        padding: 10px;
+        font-size: 20px;
+        
+    }
+
+    .icon {        
+        height: 80px;
+        margin: 10px;
+        float: left;
+        
+    }
+
+    textarea {
+        min-height:20vh;
+        min-width: 60vw;
+        font-size: 20px;        
+        margin: 20px;  
+        padding: 10px;   
+        
+    }
+
+    .container {
+        width: 100%;
+        display:flex;   
+        flex-wrap: nowrap;          
+        background-color: lightgrey;  
+       
+    }
+
+    #code, .runcode  {
+        width: 100%;
+        flex-grow: 1;        
+        font-size: 20px;
+        border:  darkblue solid 1px; 
+        position: relative; 
+              
+                               
+    }    
+
+    pre {
+        margin-left: 5%; 
+    }
+    
+
+    #runbut {
+        border: black outset 1px;
+        margin-left: 45%;
+        color: black;
+        position: absolute;       
+        bottom:   0;
+
+        
+               
+    }
+    #clrbut {
+        border: black outset 1px;
+        color: black;
+        position: absolute;       
+        bottom:   0;
+        right: 40%;
+    }
+   
+
+</style>
+<body>
+
+    <header>
+        
+        
+        <nav id="nav">
+            <h1>JavaScript in a Nutshell</h1>
+            <img class="icon" src="icon-cheat-sheet-25.png">
+            <button>Home</button>
+        </nav>
+    </header>
+
+    <h2>The While Loop</h2>
+
+    <p class="tease">Loops can execute a block of code as long as a specified condition is true. <br>
+        The while loop loops through a block of code as long as a specified condition is true. 
+        <a href="https://www.w3schools.com/js/js_loop_while.asp" target="_blank">link</a>.
+        </p><br>
+
+    
+    <ol class="tablecont">
+        <h3>Contents</h3>
+        <li>The While Loop</li>
+        <li>Comparing For and While</li>
+    </ol>
+    
+
+    <h2>Explanation</h2>
+
+    <div class="explain">  
+        
+        <ul>
+            <li>The While Loop<p>Loops can execute a block of code as long as a specified condition is true.<br>
+                The while loop loops through a block of code as long as a specified condition is true.<br>
+                The do while loop is a variant of the while loop. <br>
+                This loop will execute the code block once, before checking if the condition is true, <br>
+                then it will repeat the loop as long as the condition is true.</p>
+            </li>
+            <li>Comparing For and While<p>If you have read the previous chapter, <br>
+                about the for loop, you will discover that a while loop is much the same as a for loop, <br>
+                with statement 1 and statement 3 omitted.
+                The loop in this example uses a for loop to collect the car names from the cars array.</p>
+            </li>
+
+        </ul>
+
+    
+    
+    </div> 
+
+    <h2>JavaScript While Loop</h2>
+
+    <div class="container">
+        <div id="code">
+            <h3>Sample code</h3>
+            <pre>
+                <code>
+let text = "";
+let i = 0;
+while (i < 10) {
+    text += "<br>The number is " + i;
+    i++;
+}
+document.getElementById("demo").innerHTML = text;
+                </code>              
+            </pre>               
+        </div>            
+
+        <div class="runcode">
+            <h3>Run code</h3>
+            <pre>
+                <code>
+                    <div id="run1"> 
+                                                  
+                    </div>    
+                </code>                                                                  
+            </pre>                 
+            <button onclick="run1()" id="runbut">Run</button>
+            <button onClick="window.location.reload();" id="clrbut">Clear</button>  
+                                         
+        </div>            
+    </div>
+
+    <h2>JavaScript Do While Loop</h2>
+
+    <div class="container">
+        <div id="code">
+            <h3>Sample code</h3>
+            <pre>
+                <code>
+let text = ""
+let i = 0;
+
+do {
+    text += "<br>The number is " + i;
+    i++;
+}
+while (i < 10);  
+
+document.getElementById("demo").innerHTML = text; 
+                </code>              
+            </pre>               
+        </div>            
+
+        <div class="runcode">
+            <h3>Run code</h3>
+            <pre>
+                <code>
+                    <div id="run2"> 
+                                                  
+                    </div>    
+                </code>                                                                  
+            </pre>                 
+            <button onclick="run2()" id="runbut">Run</button>
+            <button onClick="window.location.reload();" id="clrbut">Clear</button>  
+                                         
+        </div>            
+    </div>
+    <div class="runcode">
+        <h3>Run code</h3>
+        <pre>
+            <code>
+                <div id="run3">
+
+                </div>
+            </code>
+        </pre>
+        <button onclick="run2()" id="runbut">Run</button>
+        <button onClick="window.location.reload();" id="clrbut">Clear</button> 
+    </div>
+        
+    
+    <footer>
+        <a href="https://www.w3schools.com/js/js_loop_while.asp" target="_blank">Source: W3schools</a><br><br>
+        <a href="#nav">Back to top</a>
+    </footer>
+</body>
+</html>
